@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>COVID-19 Statistics</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo">COVID-19 Info App</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="testLocations.html">Test Locations</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- Card -->
+        <!-- Separate container for the state search -->
+        <div class="col s12 m3 l3 cardContainer">
+            <h4 class="state-header">Enter a state below :</h4>
+            <div class="card state-card horizontal">
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>This can be your state, the state of a friend or family member, or anywhere else in the
+                            Country!</p>
+                    </div>
+                    <!-- Modal Trigger -->
+                    <button data-target="modal1" class="btn-large modal-trigger">Enter State</button>
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4>Enter State</h4>
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input placeholder="State..." id="search-term" type="text" class="validate">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="submit-button"
+                                class="modal-close waves-effect waves-green btn-flat">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Another card where the state info goes -->
+        <div class="col s12 m3 l3 cardContainer">
+            <div id="current-search">
+            </div>
+            <div id="modalTwo" class="hide">
+                <button data-target="modal2" class="btn-large modal-trigger">Choose another state</button>
+                <!-- Modal Structure -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <h4>Choose another state</h4>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input placeholder="State..." id="search-term" type="text" class="validate">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="submit-button"
+                            class="modal-close waves-effect waves-green btn-flat">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Separate container for world statistics -->
+        <div class="col s12 m3 l3 cardContainer">
+            <div class="col s12 m9 l9">
+                <h4 class="world-header">World Statistics</h4>
+                <div class="card world-card horizontal">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>Placeholder text, we'll build some stuff out here. Graphs, stats, and all types of shit,
+                                yo.</p>
+                        </div>
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Date</th>
+                                    <th>Confirmed</th>
+                                    <th>Deaths</th>
+                                    <th>Recovered</th>
+                                </tr>
+                            </thead>
+                            <tbody id='table-body'>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer brown">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Company Bio</h5>
+                    <p class="grey-text text-lighten-4">We are a small group of aspiring web developers working on our
+                        first
+                        project. We hope to not only make something functional, but something relevant and helpful to
+                        the community.
+                    </p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Placeholder</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Placeholder</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/statistics.js"></script>
+</body>
+
+</html>
